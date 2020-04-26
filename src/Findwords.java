@@ -11,7 +11,6 @@ public class Findwords {
         }
         System.out.println(map);
         System.out.println("____________________________________________________________________");
-
         Set<String> unique = new HashSet<>(Arrays.asList(words));
         System.out.println(unique);
         System.out.println("____________________________________________________________________");
