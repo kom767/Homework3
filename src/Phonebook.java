@@ -4,7 +4,6 @@ import java.util.*;
 public class Phonebook {
     public static void main(String[] args) {
     Directory directory = new Directory();
-
     directory.add("Ivanov", "8999123321");
     directory.add("Bobik", "8912155326");
     directory.add("Kokorin", "8917155552");
@@ -18,10 +17,10 @@ public class Phonebook {
     System.out.println(directory.get("Ivanov"));
     }
 }
-
 class Directory {
     private Map<String, List<String>> directory_hm = new HashMap<>();
     private List<String> phone_number_list;
+
 
     public void add(String surname, String phone_number) {
         if (directory_hm.containsKey(surname)) {
@@ -34,6 +33,7 @@ class Directory {
             directory_hm.put(surname, phone_number_list);
         }
     }
+
     public List<String> get(String surname) {
         return directory_hm.get(surname);
     }
